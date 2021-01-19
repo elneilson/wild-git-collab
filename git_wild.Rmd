@@ -35,9 +35,12 @@ ggplot(data = diamonds, aes(x = color, y = carat)) +
 ## PART B: Make problems
 
 ```{r break-it-1}
-ggplot(data = diamonds, aes(x = depth, y = carat, colour = "red")) +
-  geom_jitter() +
-  theme_bw()
+
+ggplot(data = diamonds, aes(x = depth, y = carat)) +
+  geom_point(aes(color = price)) +
+  scale_color_viridis_c() +
+  theme_minimal()
+
 ```
 
 ```{r break-it-2}
